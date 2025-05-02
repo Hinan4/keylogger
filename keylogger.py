@@ -4,7 +4,7 @@ from concurrent.futures import ThreadPoolExecutor
 def scan_port(ip, port):
     """Scan a single port to check if it's open."""
     try:
-        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        with socket.socet(socket.AF_INET, socket.SOCK_STREAM) as s:
             s.settimeout(1)
             s.connect((ip, port))
             print(f"[+] Port {port} is open on {ip}")
